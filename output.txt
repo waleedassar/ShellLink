@@ -1,0 +1,165 @@
+Link CLSID: {00021401-0000-0000-c000-000000000046}
+
+Link Flags: 0x800bb (HasLinkTargetIDList|HasLinkInfo|HasRelativePath|HasWorkingDir|HasArguments|IsUnicode|EnableTargetMetadata)
+
+Target File Attributes: 0x20 (FILE_ATTRIBUTE_ARCHIVE)
+Creation Time: 2015-10-30 07:17:49.987356
+Access Time: 2015-10-30 07:17:49.987356
+Write Time: 2015-10-30 07:17:49.987356
+File Size: 233984 (0x39200) bytes
+Icon Index: 0x0
+ShowCommand: SW_SHOWNORMAL
+HotKey flags: (empty)
+
+=========== 
+Now parsing TargetLinkIDList
+
+IDListSize: 0x135
+
+Now parsing ItemID at offset: 0x0
+Now parsing ItemID at offset: 0x14
+Now parsing ItemID at offset: 0x2d
+Now parsing ItemID at offset: 0x83
+Now parsing ItemID at offset: 0xdd
+ItemID Offset: 0x0
+ItemID Size: 0x14
+ItemID Type: VirtualObject
+ItemID Value: {20d04fe0-3aea-1069-a2d8-08002b30309d}
+
+
+ItemID Offset: 0x14
+ItemID Size: 0x19
+ItemID Type: Drive
+ItemID Value: C:\
+
+
+ItemID Offset: 0x2d
+ItemID Size: 0x56
+ItemID Type: Folder/File
+ItemID Value: Windows
+
+
+ItemID Offset: 0x83
+ItemID Size: 0x5a
+ItemID Type: Folder/File
+ItemID Value: System32
+
+
+ItemID Offset: 0xdd
+ItemID Size: 0x56
+ItemID Type: Folder/File
+ItemID Value: cmd.exe
+
+
+
+=========== 
+Now parsing LinkInfo
+
+LinkInfoFlags: 0x1 (VolumeIDAndLocalBasePath)
+VolumeIDOffset: 0x1c
+LocalBasePathOffset: 0x34
+CommonNetworkRelativeLinkOffset: 0x0
+CommonPathSuffixOffset: 0x50
+LocalBasePathOffsetUnicode: 0x0
+CommonPathSuffixOffsetUnicode: 0x0
+== Volume ==>
+
+Drive Type: 0x3 (DRIVE_FIXED)
+Drive Name: Windows
+Drive SerialNo: 0xd0709af3L (D070-9AF3)
+== LocalBasePath ==>
+
+LocalBasePath: C:\Windows\System32\cmd.exe
+== CommonPathSuffix ==>
+
+
+=========== 
+Now parsing StringData
+
+Relative Path: ..\..\..\Windows\System32\cmd.exe
+Working Dir: %userprofile%\desktop
+Arguments: /C shit.cmd
+
+=========== 
+Now parsing ExtraData
+
+DataBlock No. ===> 0
+Block Signaure: 0xa0000005L (SpecialFolderDataBlock)
+FolderId: 0x25
+LinkTargetIDListOffset: 0xdd
+DataBlock No. ===> 1
+Block Signaure: 0xa000000bL (KnownFolderDataBlock)
+FolderId: {1ac14e77-02e7-4e5d-b744-2eb1ae5198b7}
+Offset: 0xdd
+DataBlock No. ===> 2
+Block Signaure: 0xa0000003L (TrackerDataBlock)
+Version: 0x0
+MachineID: laptop-38m84vb4
+Droid: 94a1efff4d795e42b5334e52762f9cf36c7f0581b259e611af0d00dbdfd13340
+DroidBirth: 94a1efff4d795e42b5334e52762f9cf36c7f0581b259e611af0d00dbdfd13340
+DataBlock No. ===> 3
+Block Signaure: 0xa0000002L (ConsoleDataBlock)
+FillAttributes: 0x7 (FOREGROUND_BLUE|FOREGROUND_GREEN|FOREGROUND_RED)
+PopupFillAttributes: 0xf5 (FOREGROUND_BLUE|FOREGROUND_RED|BACKGROUND_BLUE|BACKGROUND_GREEN|BACKGROUND_RED|BACKGROUND_INTENSITY)
+ScreenBufferSizeX: 0x78
+ScreenBufferSizeY: 0x2329
+WindowSizeX: 0x78
+WindowSizeY: 0x1e
+WindowOriginX: 0x0
+WindowOriginY: 0x0
+Unused1: 0x0
+Unused2: 0x0
+FontSize: 0x100008
+FontFamily: 0x36 (Unknown)
+FontWeight: 0x190 (Bold font)
+FaceName: ['Consolas', 'TTFont__']
+CursorSize: 0x19 (Small cursor)
+FullScreen: 0x0 (Off)
+QuickEdit: 0x1 (On)
+InsertMode: 0x1 (On)
+AutoPosition: 0x1 (On)
+HistoryBufferSize: 0x32
+NumberOfHistoryBuffers: 0x4
+HistoryNoDup: 0x0 (Duplicates not allowed)
+Color Table: 00000000000080000080000000808000800000008000800080800000c0c0c000808080000000ff0000ff000000ffff00ff000000ff00ff00ffff0000ffffff00
+DataBlock No. ===> 4
+Block Signaure: 0xa0000009L (PropertyStoreDataBlock)
+DataBlockSize: 0x2b7
+PropertyStore: 5900000031535053ed30bdda43008947a7f8d013a47366223d00000064000000001f00000016000000530079007300740065006d00330032002000280043003a005c00570069006e0064006f007700730029000000000000008d00000031535053e28a5846bc4c3843bbfc139326986dce7100000004000000001f0000002f00000053002d0031002d0035002d00320031002d0031003900380030003500330033003800340034002d0031003400320032003400390034003200300035002d0031003900360037003000380038003700300037002d003100300030003100000000000000000082000000315350530706570c9603de439d61e321d7df50261100000003000000000b000000ffff00001100000001000000000b000000ffff00001100000002000000000b000000ffff00001100000004000000000b0000000000000011000000060000000002000000ff0000001100000005000000000b000000ffff000000000000a50000003153505330f125b7ef471a10a5f102608c9eebac210000000a000000001f0000000800000063006d0064002e006500780065000000150000000f000000004000000000e39d15e312d101150000000c000000001500000000920300000000002900000004000000001f0000000c0000004100700070006c00690063006100740069006f006e000000150000000e00000000400000001cf59b15e312d101000000006500000031535053a66a63283d95d211b5d600c04fd918d0490000001e000000001f0000001c00000043003a005c00570069006e0064006f00770073005c00530079007300740065006d00330032005c0063006d0064002e006500780065000000000000003900000031535053b1166d44ad8d7048a748402ea43d788c1d000000680000000048000000160966abbdd1bd449fb9bfc45eaf510e0000000000000000
+StoreSize: 0x59
+Version: 0x53505331
+Format ID: {dabd30ed-0043-4789-a7f8-d013a4736622}
+StoreSize: 0x8d
+Version: 0x53505331
+Format ID: {46588ae2-4cbc-4338-bbfc-139326986dce}
+StoreSize: 0x82
+Version: 0x53505331
+Format ID: {0c570607-0396-43de-9d61-e321d7df5026}
+StoreSize: 0xa5
+Version: 0x53505331
+Format ID: {b725f130-47ef-101a-a5f1-02608c9eebac}
+StoreSize: 0x65
+Version: 0x53505331
+Format ID: {28636aa6-953d-11d2-b5d6-00c04fd918d0}
+StoreSize: 0x39
+Version: 0x53505331
+Format ID: {446d16b1-8dad-4870-a748-402ea43d788c}
+StoreSize: 0x0
+Terminal of Serialized Properties found
+
+ValueSize: 0x3d
+PropertyId: 0x64
+ValueSize: 0x71
+PropertyId: 0x4
+ValueSize: 0x11
+PropertyId: 0x3
+ValueSize: 0x21
+PropertyId: 0xa
+ValueSize: 0x49
+PropertyId: 0x1e
+ValueSize: 0x1d
+PropertyId: 0x68
+Terminal Block found
+
+Done successfully
+
