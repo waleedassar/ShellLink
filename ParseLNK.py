@@ -172,7 +172,27 @@ def IsKnownSignatureId(SigId):
         else:
             return True
     return False
-    
+
+
+def PrintMacAddress(Mac):
+    if Mac == "":
+        return ""
+    listMapX = ["00","01","02","03","04","05","06","07","08","09","0a","0b","0c","0d","0e","0f"]
+    Length = len(Mac)
+    #print hex(Length)
+    if Length != 6:
+        return ""
+    sMac = ""
+    for i in range(0,6):
+        XX =  ord(Mac[i])
+        if XX < 0x10:
+            sMac += listMapX[XX]
+        else:
+            XXX = str(hex(XX))
+            sMac += XXX[2:4]
+        sMac += "-"
+    return sMac.rstrip("-")
+
 def PrintCLSID(fConX):
     listMapX = ["00","01","02","03","04","05","06","07","08","09","0a","0b","0c","0d","0e","0f"]
     Length = len(fConX)
@@ -1031,6 +1051,15 @@ def ParseConsoleFEDataBlock(DataBlock,DataBlockSize):
     print FStr
     return (FStr + "\r\n")
 
+
+def GetMacAddressFromDroidValue(Droid):
+    if Droid == "":
+        return ""
+    if len(Droid) != 32:
+        return ""
+    MacRaw = Droid[26:32]
+    return PrintMacAddress(MacRaw)
+
 def ParseTrackerDataBlock(DataBlock,DataBlockSize):
     if DataBlock == "" or len(DataBlock) != DataBlockSize:
         return ""
@@ -1040,7 +1069,7 @@ def ParseTrackerDataBlock(DataBlock,DataBlockSize):
     
     Length = struct.unpack("L",DataBlock[i:i+4])[0]
     i += 4
-    if Length != 0x58:
+    if Length < 0x58:
         return ""
     FStr = ""
     
@@ -1058,13 +1087,27 @@ def ParseTrackerDataBlock(DataBlock,DataBlockSize):
     
     Droid = DataBlock[i:i+32]
     i += 32
-    Str = ( "Droid: " + PrintHash(Droid) )
+    Droid_0 = Droid[0:16]
+    Droid_1 = Droid[16:32]
+    MacAddress = GetMacAddressFromDroidValue(Droid)
+    
+    Str = ( "Droid: " + PrintHash(Droid) + "\r\n")
+    Str += ( "Droid (Low): "  + PrintCLSID(Droid_0) + "\r\n")
+    Str += ( "Droid (High): " + PrintCLSID(Droid_1) + "\r\n")
+    Str += ( "Mac Address: " + MacAddress + "\r\n")
     print Str
     FStr += (Str+"\r\n")
 
     DroidBirth = DataBlock[i:i+32]
     i += 32
-    Str = ( "DroidBirth: " + PrintHash(DroidBirth) )
+    DroidBirth_0 = DroidBirth[0:16]
+    DroidBirth_1 = DroidBirth[16:32]
+    MacAddressBirth = GetMacAddressFromDroidValue(DroidBirth)
+
+    Str = ( "DroidBirth: " + PrintHash(DroidBirth) + "\r\n")
+    Str += ( "DroidBirth (Low): "  + PrintCLSID(DroidBirth_0) + "\r\n")
+    Str += ( "DroidBirth (High): " + PrintCLSID(DroidBirth_1) + "\r\n")
+    Str += ( "Mac Address: " + MacAddressBirth + "\r\n")
     print Str
     FStr += (Str+"\r\n")
 
